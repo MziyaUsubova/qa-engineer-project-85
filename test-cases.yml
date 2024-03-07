@@ -53,7 +53,6 @@
   prerequisites: |
     Открыта страница логина
   test-data: |
-    Тестовые данные
     Email = shaliko@ezid.ru Пароль = 123456
   steps:
     - Вводим Email
@@ -201,6 +200,50 @@
     - Кликнуть в всплывшем окне Create invite
   expected-result: |  
     Выбранный игрок получил приглашение 
+
+- summary: | 
+    Проверка создания ноового турнира с корректными данными даты и времени
+  requirement: |
+    Пользователь может создать новый турнир заполнив форму 
+  prerequisites: |
+    Открыта страница логина
+  test-data: |
+    Name = Mziya Type = individual
+    Starts at = 10.03.2024, 12:10
+    Access type = public Task strategy = round
+    Task provider = tags Level = medium
+    Players limit = 32 Default language = js Match timeout = 175 seconds
+    Break duration seconds = 44
+  steps:
+    - Главная страница 
+    - Кликаем фото профиля или Имя
+    - В выпадающем списке Tournaments 
+    - Заполнить форму Create a new tournament
+    - Кликаем Create
+  expected-result: |
+    Выводится сообщение с датой начала турнира
+  
+- summary: | 
+    Проверка создания ноового турнира с некорректными данными даты и времени
+  requirement: |
+    Пользователь может создать новый турнир заполнив форму 
+  prerequisites: |
+    Открыта страница логина
+  test-data: |
+    Name = Mziya Type = individual
+    Starts at = 10.03.2023, 12:10
+    Access type = public Task strategy = round
+    Task provider = tags Level = medium
+    Players limit = 32 Default language = js Match timeout = 175 seconds
+    Break duration seconds = 44
+  steps:
+    - Главная страница 
+    - Кликаем фото профиля или Имя
+    - В выпадающем списке Tournaments 
+    - Заполнить форму Create a new tournament
+    - Кликаем Create
+  expected-result: |
+    На шаге установки даты выводится сообщение о некорректной дате либо времени    
   
 - summary: |
     Смена языка программирования во время решения 
