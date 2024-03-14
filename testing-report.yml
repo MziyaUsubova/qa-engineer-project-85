@@ -25,7 +25,8 @@
 
 - summary: |
     Проверка выхода кнопкой Sign out
-     
+  status: pass  
+
 - summary: |
     Проверка создания игры с ботом
   status: pass    
