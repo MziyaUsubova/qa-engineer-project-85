@@ -4,11 +4,11 @@
   status: pass
 
 - summary: |
-     Проверка входа пользователя через GitHub
+    Проверка входа пользователя через GitHub
   status: pass  
 
 - summary: |
-     Проверка входа пользователя через Discord
+    Проверка входа пользователя через Discord
   status: pass
 
 - summary: |
@@ -20,7 +20,7 @@
   status: pass    
 
 - summary: |
-     Проверка игры без входа 
+    Проверка игры без входа 
   status: pass         
 
 - summary: |
