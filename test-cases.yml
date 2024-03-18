@@ -39,8 +39,7 @@
   test-data: |
      Sign in with Discord
   steps:
-     - Страница входа
-     - Sign in with Discord
+     - Кликнуть Sign in with Discord
   expected-result: | 
      Авторизация прошла успешно, пользователь на главной странице
       
@@ -75,7 +74,7 @@
     Пользователь получает сообщение об ошибке  
     
 - summary: |
-     Проверка игры без входа 
+    Проверка игры без входа 
   requirement: |
      Пользователь имеет возможность без выполнения входа играть 
   prerequisites:
@@ -83,7 +82,6 @@
   test-data: |
      TRY SIMPLE BATTLE
   steps:
-     - Страница авторизации, регистрации
      - Кликнуть на TRY SIMPLE BATTLE
   expected-result: | 
      Пользователь переходит на страницу с игрой 
@@ -108,11 +106,10 @@
   requirement: |
     Пользователь имеет возможность создать игру с ботом
   prerequisites:
-    Открыта главная страница 
+    Выполнен вход 
   test-data: |
     Create a new game
   steps:
-    - Главная страница 
     - Кликнуть Create new game 
     - Game Type with a bot
     - Кликнуть Create battle 
@@ -125,11 +122,10 @@
   requirement: |
     Пользователь имеет возможность создать игру с другом
   prerequisites:
-    Открыта главная страница 
+    Выполнен вход 
   test-data: |
     Create a new game
-  steps:
-    - Главная страница 
+  steps: 
     - Кликнуть Create new game 
     - Game Type with a friend 
     - Кликнуть Create battle 
@@ -143,11 +139,10 @@
   requirement: |
     Пользователь имеет возможность создать игру с другим пользователм 
   prerequisites:
-    Открыта главная страница 
+    Выполнен вход 
   test-data: |
     Create a new game
   steps:
-    - Главная страница 
     - Кликнуть Create new game 
     - Game Type with other user 
     - Кликнуть Create battle 
@@ -161,11 +156,10 @@
   requirement: 
     Пользователь имеет возможность создать игру выбрав уровень 
   prerequisites:
-    Открыта главная страница 
+    Выполнен вход 
   test-data: |
     Create a new game
-  steps:
-    - Главная страница 
+  steps: 
     - Кликнуть Create new game 
     - Выбрать Level   
     - Кликнуть Create battle
@@ -177,11 +171,10 @@
   requirement: |
     Пользователь имеет возможность создать игру установив Time controle
   prerequisites:
-    Открыта главная страница
+    Выполнен вход
   test-data: |
     Create a new game
-  steps:
-    - Главная страница 
+  steps: 
     - Кликнуть Create new game 
     - Установить Time controle  
     - Кликнуть Create battle
@@ -195,11 +188,10 @@
   requirement: |
     Пользователь может отправить приглашение в игру игроку, находящемуся в онлайне
   prerequisites: 
-    Открыта главная страница 
+    Выполнен вход 
   test-data: |
     Send battle invite
   steps:
-    - Главная страница
     - Кликнуть иконку с мечами
     - В всплывшем окне выбрать игрока 
     - Кликнуть в всплывшем окне Create invite
@@ -212,11 +204,10 @@
   requirement: |
     Пользователь может создать новый турнир заполнив форму 
   prerequisites: |
-    Открыта страница логина
+    Выполнен вход
   test-data: |
     Starts at = 10.03.2024, 12:10
-  steps:
-    - Главная страница 
+  steps: 
     - Кликаем фото профиля или Имя
     - В выпадающем списке Tournaments 
     - Указать Starts at = 10.03.2024, 12:10
@@ -229,11 +220,10 @@
   requirement: |
     Пользователь может создать новый турнир заполнив форму 
   prerequisites: |
-    Открыта страница логина
+    Выполнен выход
   test-data: |
     Starts at = 10.03.2023, 12:10
-  steps:
-    - Главная страница 
+  steps: 
     - Кликаем фото профиля
     - В выпадающем списке Tournaments 
     - Заполнить Starts at = 10.03.2023, 12:10 
@@ -429,5 +419,4 @@
     - Просмотреть общий рейтинг пользователей за все время.
   expected-result: |
     Отображается рейтинг пользователей за каждый указанный период времени, активность, 
-    достижения в соответствующие периоды.
-
+    достижения в соответствующие периоды
