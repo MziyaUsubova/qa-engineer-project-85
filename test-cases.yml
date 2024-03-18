@@ -9,10 +9,10 @@
     Nickname = Mziya Email = usubova@ezid.ru Password = 123qwe 
   steps:
     - Nickname = Mziya
-    - Вводим Email = usubova@ezid.ru
-    - Вводим Password = 123qwe
+    - Ввести Email = usubova@ezid.ru
+    - Ввести Password = 123qwe
     - Password Confirmation = 123qwe
-    - Нажимаем кнопку Submit
+    - Нажать кнопку Submit
   expected-result: |
     Пользователь успешно авторизовался, пользователь на главной странице
     
@@ -52,9 +52,9 @@
   test-data: |
     Email = shaliko@ezid.ru Password = 123456
   steps:
-    - Вводим Email
-    - Вводим Password
-    - Нажимаем кнопку «Submit»
+    - Ввести Email
+    - Ввести Password
+    - Нажать кнопку «Submit»
   expected-result: |
     Пользователь успешно вошел на сайт, на главную страницу
 
@@ -67,9 +67,9 @@
   test-data: |
     Email = shaliko@ezid.ru Password = qwerty
   steps:
-    - Вводим  Email 
-    - Вводим Password
-    - Нажимаем кнопку «Sign up»
+    - Ввести  Email 
+    - Ввести Password
+    - Нажать кнопку «Sign up»
   expected-result: |
     Пользователь получает сообщение об ошибке  
     
@@ -179,7 +179,7 @@
     - Установить Time controle  
     - Кликнуть Create battle
     - Дргуой игрок получил вызов 
-    - Друг игрок принял игру
+    - Другой игрок принял игру
   expected-result: |
     Игра создана, открывается страница игры с установленным Time controle
     
@@ -208,10 +208,10 @@
   test-data: |
     Starts at = 10.03.2024, 12:10
   steps: 
-    - Кликаем фото профиля или Имя
+    - Кликнуть фото профиля или Имя
     - В выпадающем списке Tournaments 
     - Указать Starts at = 10.03.2024, 12:10
-    - Кликаем Create
+    - Кликнуть Create
   expected-result: |
     Турнир создан, открывается страница турнира с счетчиком времни и сообщением "Waiting Participants"
   
@@ -224,10 +224,10 @@
   test-data: |
     Starts at = 10.03.2023, 12:10
   steps: 
-    - Кликаем фото профиля
-    - В выпадающем списке Tournaments 
+    - Кликнуть фото профиля
+    - В выпадающем списке выбрать Tournaments 
     - Заполнить Starts at = 10.03.2023, 12:10 
-    - Кликаем Create
+    - Кликнуть Create
   expected-result: |
     После установки даты выводится сообщение о некорректной дате либо времени    
   
@@ -287,8 +287,8 @@
     Игра между дргуими пользователями
   steps: 
     - Главная страница 
-    - LOBBY
-    - SHOW
+    - Кликнуть LOBBY
+    - Кликнуть SHOW
   expected-result: |
     Другие пользователи видят актуальное состояние игры и ход действий обоих игроков в реальном времени.
 
@@ -364,7 +364,7 @@
 - summary: |    
     Доступность игры в записи после ее завершения
   requirement: |
-    После завершения игры пользователи имеют доступ к записи игры или ее результатам.
+    После завершения игры пользователи имеют доступ к записи игры или ее результатам
   prerequisites:  
     Создать батл 
   test-data: |
