@@ -25,7 +25,6 @@
   test-data: |
      Sign in with GitHub
   steps:
-     - Страница входа
      - Sign in with GitHub
   expected-result: | 
      Авторизация прошла успешно, пользователь на главной странице
@@ -80,7 +79,7 @@
   prerequisites:
      Открыть главную страницу
   test-data: |
-     TRY SIMPLE BATTLE
+     Кликнуть TRY SIMPLE BATTLE
   steps:
      - Кликнуть на TRY SIMPLE BATTLE
   expected-result: | 
@@ -91,11 +90,10 @@
   requirement: |
     Пользователь имеет возможность выйти из аккауната 
   prerequisites:
-    Кликнув Sign out пользователь покидает аккаунт
+    Выполнить вход произойдет переход на главную страницу 
   test-data: |
     Sign out
-  steps:
-    - Главная страница 
+  steps: 
     - Кликнуть на никнейм
     - В выпадающем списке кликнуть Sign out
   expected-result: |
